@@ -1,0 +1,6 @@
+{
+    "data": [
+        {"id" : 1, "profile_name" : "name1" , "path" : "./profile/profile_1"},
+        {"id" : 2, "profile_name" : "name2" , "path" : "./profile/profile_2"}
+    ]
+}

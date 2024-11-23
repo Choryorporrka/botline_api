@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Language" content="th" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Api Bot Line</title>
+    <style>
+        Body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: #DCDCDC;
+        }
+        button {
+            background-color: #696969;
+            width: 100%;
+            color: white;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+        }
+        form {
+            border: 3px solid #F0FFF0;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+        button:hover {
+            opacity: 0.7;
+        }
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            margin: 10px 5px;
+        }
+
+
+        .container {
+            padding: 25px;
+            background-color: #DCDCDC;
+        }
+    </style>
+
+</head>
+<body>
+
+<form action="http://127.0.0.1:3900/api/login" method="POST">
+    <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <label>User Line</label>
+                    <input type="text" placeholder="" name="user_name" value="admin" required>
+                </td>
+                <td>
+                    <label>Message</label>
+                    <input type="text" placeholder="" name="password" value="ab1234cd" required>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit"><b>LOGIN</b></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+<form action="http://127.0.0.1:3900/api/reply_message" method="POST">
+    <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <label>User Line</label>
+                    <input type="text" placeholder="กรอกชื่อ line" name="user_line" value="user_001" required>
+                </td>
+                <td>
+                    <label>Message</label>
+                    <input type="text" placeholder="ข้อความที่ส่ง" name="message" value="ทดสอบข้อความ test message" required>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit"><b>SENT --> MESSAGE</b></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+<form action="http://127.0.0.1:3900/api/user_list" method="POST">
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit"><b>GET --> USER LIST</b></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+</body>
+</html>
